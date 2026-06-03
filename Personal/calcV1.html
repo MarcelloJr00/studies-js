@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>"Calc" is short for calculator guys, i'm just using slang.</h1>
+
+    <script>
+        let number1 = prompt("Number 1:", "");
+        let operator = prompt("Operator:", "");
+        let number2 = prompt("Number 2:", "");
+        let expression = ""
+        let result = 0
+
+        if (operator.includes("*") || operator.includes("+") || operator.includes("-") || operator.includes("/")) {
+            if (!(isNaN(number1) && isNaN(number2))) {
+                expression = number1 + operator + number2
+                result = eval(expression)
+                alert(result)
+            } else {
+                alert("Invalid!");
+            };
+        } else if (operator === "" || operator === null) {
+            alert("Canceled!");
+        } else {
+            alert("Invalid!");
+        };
+    </script>
+
+</body>
+</html>
