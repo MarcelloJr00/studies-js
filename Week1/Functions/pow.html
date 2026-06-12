@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pow!</title>
+</head>
+<body>
+    <script>
+        function pow(a, b) {
+            let result = a
+
+            for (let n = 1; n < b; n++) {
+                result *= a
+            }
+
+            return result
+        }
+
+        let a = +prompt("a?", 0)
+        let b = +prompt("b?", 0)
+        
+        if (b < 1) {
+            alert(`Power ${b} is not supported, use a positive integer`);
+        }  else {
+            alert(pow(a, b))
+        }
+        
+    </script>
+</body>
+</html>
